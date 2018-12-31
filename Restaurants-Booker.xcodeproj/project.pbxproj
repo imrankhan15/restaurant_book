@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19029F5421D8B36200770E27 /* Login-OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19029F5321D8B36200770E27 /* Login-OwnerViewController.swift */; };
+		19029F5621D8BA3500770E27 /* CreateNewOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19029F5521D8BA3500770E27 /* CreateNewOwnerViewController.swift */; };
+		19029F5821D8C9DA00770E27 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19029F5721D8C9DA00770E27 /* BookingViewController.swift */; };
+		19029F5A21D8D07500770E27 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19029F5921D8D07500770E27 /* Dish.swift */; };
+		190388B121D92D3800CF1355 /* DishListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190388B021D92D3800CF1355 /* DishListTableViewController.swift */; };
+		193822F421D7CCF8001F4033 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193822F321D7CCF8001F4033 /* Customer.swift */; };
+		193822F621D7D130001F4033 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193822F521D7D130001F4033 /* Owner.swift */; };
+		193822F821D7F361001F4033 /* NewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193822F721D7F361001F4033 /* NewCustomerViewController.swift */; };
+		193822FA21D815C6001F4033 /* Login-Customer-ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193822F921D815C5001F4033 /* Login-Customer-ViewController.swift */; };
 		19520E0E21D7687400C30C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19520E0D21D7687400C30C98 /* AppDelegate.swift */; };
 		19520E1021D7687400C30C98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19520E0F21D7687400C30C98 /* ViewController.swift */; };
 		19520E1321D7687400C30C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19520E1121D7687400C30C98 /* Main.storyboard */; };
 		19520E1621D7687400C30C98 /* Restaurants_Booker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19520E1421D7687400C30C98 /* Restaurants_Booker.xcdatamodeld */; };
 		19520E1821D7687D00C30C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19520E1721D7687D00C30C98 /* Assets.xcassets */; };
 		19520E1B21D7687D00C30C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19520E1921D7687D00C30C98 /* LaunchScreen.storyboard */; };
+		19A4AF5321D93EF800D86CD5 /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A4AF5221D93EF800D86CD5 /* DishListTableViewCell.swift */; };
+		19A4AF5521D944DC00D86CD5 /* DishListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A4AF5421D944DC00D86CD5 /* DishListItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19029F5321D8B36200770E27 /* Login-OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-OwnerViewController.swift"; sourceTree = "<group>"; };
+		19029F5521D8BA3500770E27 /* CreateNewOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewOwnerViewController.swift; sourceTree = "<group>"; };
+		19029F5721D8C9DA00770E27 /* BookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		19029F5921D8D07500770E27 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		190388B021D92D3800CF1355 /* DishListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewController.swift; sourceTree = "<group>"; };
+		193822F321D7CCF8001F4033 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		193822F521D7D130001F4033 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		193822F721D7F361001F4033 /* NewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomerViewController.swift; sourceTree = "<group>"; };
+		193822F921D815C5001F4033 /* Login-Customer-ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Login-Customer-ViewController.swift"; sourceTree = "<group>"; };
 		19520E0A21D7687400C30C98 /* Restaurants-Booker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Restaurants-Booker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19520E0D21D7687400C30C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19520E0F21D7687400C30C98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +44,8 @@
 		19520E1721D7687D00C30C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19520E1A21D7687D00C30C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19520E1C21D7687D00C30C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19A4AF5221D93EF800D86CD5 /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
+		19A4AF5421D944DC00D86CD5 /* DishListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +78,24 @@
 		19520E0C21D7687400C30C98 /* Restaurants-Booker */ = {
 			isa = PBXGroup;
 			children = (
+				193822F921D815C5001F4033 /* Login-Customer-ViewController.swift */,
+				19029F5321D8B36200770E27 /* Login-OwnerViewController.swift */,
 				19520E0D21D7687400C30C98 /* AppDelegate.swift */,
 				19520E0F21D7687400C30C98 /* ViewController.swift */,
 				19520E1121D7687400C30C98 /* Main.storyboard */,
+				190388B021D92D3800CF1355 /* DishListTableViewController.swift */,
+				19A4AF5421D944DC00D86CD5 /* DishListItemViewController.swift */,
+				19A4AF5221D93EF800D86CD5 /* DishListTableViewCell.swift */,
+				19029F5721D8C9DA00770E27 /* BookingViewController.swift */,
+				193822F721D7F361001F4033 /* NewCustomerViewController.swift */,
+				19029F5521D8BA3500770E27 /* CreateNewOwnerViewController.swift */,
 				19520E1721D7687D00C30C98 /* Assets.xcassets */,
 				19520E1921D7687D00C30C98 /* LaunchScreen.storyboard */,
 				19520E1C21D7687D00C30C98 /* Info.plist */,
 				19520E1421D7687400C30C98 /* Restaurants_Booker.xcdatamodeld */,
+				193822F321D7CCF8001F4033 /* Customer.swift */,
+				193822F521D7D130001F4033 /* Owner.swift */,
+				19029F5921D8D07500770E27 /* Dish.swift */,
 			);
 			path = "Restaurants-Booker";
 			sourceTree = "<group>";
@@ -138,8 +171,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				193822F821D7F361001F4033 /* NewCustomerViewController.swift in Sources */,
+				193822FA21D815C6001F4033 /* Login-Customer-ViewController.swift in Sources */,
+				19A4AF5521D944DC00D86CD5 /* DishListItemViewController.swift in Sources */,
+				19029F5A21D8D07500770E27 /* Dish.swift in Sources */,
+				19029F5421D8B36200770E27 /* Login-OwnerViewController.swift in Sources */,
+				19A4AF5321D93EF800D86CD5 /* DishListTableViewCell.swift in Sources */,
 				19520E1021D7687400C30C98 /* ViewController.swift in Sources */,
+				193822F621D7D130001F4033 /* Owner.swift in Sources */,
+				193822F421D7CCF8001F4033 /* Customer.swift in Sources */,
+				19029F5621D8BA3500770E27 /* CreateNewOwnerViewController.swift in Sources */,
 				19520E0E21D7687400C30C98 /* AppDelegate.swift in Sources */,
+				190388B121D92D3800CF1355 /* DishListTableViewController.swift in Sources */,
+				19029F5821D8C9DA00770E27 /* BookingViewController.swift in Sources */,
 				19520E1621D7687400C30C98 /* Restaurants_Booker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WY7K834X3;
 				INFOPLIST_FILE = "Restaurants-Booker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +341,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Restaurants-Booker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,6 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WY7K834X3;
 				INFOPLIST_FILE = "Restaurants-Booker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Restaurants-Booker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
