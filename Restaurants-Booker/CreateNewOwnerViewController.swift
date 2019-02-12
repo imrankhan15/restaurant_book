@@ -8,19 +8,21 @@
 
 import UIKit
 import os.log
+import Alamofire
 
 class CreateNewOwnerViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
-
+ let URL_USER_REGISTER = "http://restaurantsbooker.de/owner_register.php";
+    
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var mobile: UITextField!
     
+    @IBOutlet weak var maximum_customer_number: UITextField!
     @IBOutlet weak var restaurant_name: UITextField!
     @IBOutlet weak var submit_button: UIButton!
     
-    var owners = [Owner]()
-    var dishes = [Dish]()
-    var owner: Owner?
+    @IBOutlet weak var label: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +31,16 @@ class CreateNewOwnerViewController: UIViewController, UITextFieldDelegate, UINav
         userName.delegate = self
         mobile.delegate = self
         restaurant_name.delegate = self
+        maximum_customer_number.delegate = self
         password.autocorrectionType = .no
         userName.autocorrectionType = .no
         mobile.autocorrectionType = .no
         restaurant_name.autocorrectionType = .no
+        maximum_customer_number.autocorrectionType = .no
         
         updateSaveButtonState()
         
-        if let savedOwners = loadOwners() {
-            owners += savedOwners
-        }
+        
     }
     
 
@@ -52,72 +54,48 @@ class CreateNewOwnerViewController: UIViewController, UITextFieldDelegate, UINav
         
         let text3 = restaurant_name.text ?? ""
         
-        submit_button.isEnabled = !text.isEmpty && !text1.isEmpty && !text2.isEmpty && !text3.isEmpty
+        let text4 = maximum_customer_number.text ?? ""
+        submit_button.isEnabled = !text.isEmpty && !text1.isEmpty && !text2.isEmpty && !text3.isEmpty && !text4.isEmpty
     }
     
-    private func loadOwners() -> [Owner]?  {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Owner.ArchiveURL.path) as? [Owner]
-    }
     
-    private func loadDishes() -> [Dish]?  {
-        return NSKeyedUnarchiver.unarchiveObject(withFile: Dish.ArchiveURL.path) as? [Dish]
-    }
     
-    func isMatched() -> Bool {
-        for owner in owners {
-            
-            if owner.password == password.text {
-                
-                return true
-            }
-        }
-        return false
-    }
-    
+   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
     @IBAction func done_action(_ sender: UIButton) {
-        if isMatched(){
-            
-            let alertController = UIAlertController(title: "Password Already Exists", message: "Please Select Another Password", preferredStyle: UIAlertController.Style.alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                (result : UIAlertAction) -> Void in
-                print("OK")
-            }
-            
-            alertController.addAction(okAction)
-            self.present(alertController, animated: true, completion: nil)
-            
-            
-            
-            
-        }
-        else {
-            
-            let username = self.userName.text!
-            let password = self.password.text!
-            let mobile = self.mobile.text!
-            let restaurant_name = self.restaurant_name.text!
-            
-            if let saveddishes = loadDishes() {
-                dishes += saveddishes            }
+        
+        //creating parameters for the post request
+        let parameters: Parameters=[
+            "username":userName.text!,
+            "password":password.text!,
+            "restaurant_name":restaurant_name.text!,
+            "mobile":mobile.text!,
+            "maximum_customer_number":maximum_customer_number.text!
+        ]
+        
+        //Sending http post request
+        AF.request(URL_USER_REGISTER, method: .post, parameters: parameters).responseJSON
+            {
+                response in
+                //printing response
+                print(response)
                 
-            else {
-                
-                
-            }
-
-            owner = Owner(username: username, password: password, restaurant_name: restaurant_name, mobile: mobile, dishes: dishes)
-            
-            owners.append(owner!)
-            saveOwners()
-            
-            
+                //getting the json value from the server
+                if let result = response.result.value {
+                    
+                    //converting it as NSDictionary
+                    let jsonData = result as! NSDictionary
+                    
+                    //displaying the message in label
+                    self.label.text = jsonData.value(forKey: "message") as! String?
+                }
         }
         
+            
+       
         
         
     }
@@ -138,14 +116,7 @@ class CreateNewOwnerViewController: UIViewController, UITextFieldDelegate, UINav
         
     }
     
-    private func saveOwners() {
-        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(owners, toFile: Owner.ArchiveURL.path)
-        if isSuccessfulSave {
-            os_log("Owners successfully saved.", log: OSLog.default, type: .debug)
-        } else {
-            os_log("Failed to save owners...", log: OSLog.default, type: .error)
-        }
-    }
+    
     
 
 }

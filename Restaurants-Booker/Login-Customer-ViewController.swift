@@ -41,10 +41,10 @@ class Login_Customer_ViewController: UIViewController, UITextFieldDelegate, UINa
     func isMatched() -> Bool {
         for customer in customers {
             
-            if customer.password == password.text {
+         /*   if customer.password == password.text {
                 
                 return true
-            }
+            }*/
         }
         return false
     }

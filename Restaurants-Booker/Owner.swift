@@ -14,7 +14,7 @@ class Owner: NSObject, NSCoding {
     var password: String
     var restaurant_name: String
     var mobile: String
-    var dishes = [Dish]()
+    var max_customer: String
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -27,11 +27,11 @@ class Owner: NSObject, NSCoding {
         static let mobile = "mobile"
         
         static let restaurant_name = "restaurant_name"
-        static let dishes = "dishes"
+        static let max_customer = "max_customer"
     }
     
     //MARK: Initialization
-    init?(username: String, password: String, restaurant_name: String, mobile: String, dishes: [Dish]) {
+    init?(username: String, password: String, restaurant_name: String, mobile: String, max_customer: String) {
         guard !username.isEmpty else {
             return nil
         }
@@ -44,7 +44,7 @@ class Owner: NSObject, NSCoding {
         guard !mobile.isEmpty else {
             return nil
         }
-        guard !dishes.isEmpty else {
+        guard !max_customer.isEmpty else {
             return nil
         }
         // Initialize stored properties.
@@ -52,7 +52,7 @@ class Owner: NSObject, NSCoding {
         self.password = password
         self.mobile = mobile
         self.restaurant_name = restaurant_name
-        self.dishes = dishes
+        self.max_customer = max_customer
     }
 
     //MARK: NSCoding
@@ -62,7 +62,7 @@ class Owner: NSObject, NSCoding {
         aCoder.encode(password, forKey: PropertyKey.password)
         aCoder.encode(mobile, forKey: PropertyKey.mobile)
         aCoder.encode(restaurant_name, forKey: PropertyKey.restaurant_name)
-        aCoder.encode(dishes, forKey: PropertyKey.dishes)
+        aCoder.encode(max_customer, forKey: PropertyKey.max_customer)
     }
     required convenience init?(coder aDecoder: NSCoder) {
         
@@ -87,13 +87,14 @@ class Owner: NSObject, NSCoding {
             return nil
         }
         
-        guard let dishes = aDecoder.decodeObject(forKey: PropertyKey.dishes) as? [Dish] else {
-            os_log("Unable to decode the name for a Dish object.", log: OSLog.default, type: .debug)
+        
+        guard let max_customer = aDecoder.decodeObject(forKey: PropertyKey.max_customer) as? String else {
+            os_log("Unable to decode the max_customer for a Owner object.", log: OSLog.default, type: .debug)
             return nil
         }
         
         // Must call designated initializer.
-        self.init(username: username, password: password, restaurant_name: restaurant_name, mobile: mobile, dishes: dishes)
+        self.init(username: username, password: password, restaurant_name: restaurant_name, mobile: mobile, max_customer: max_customer)
         
     }
 }

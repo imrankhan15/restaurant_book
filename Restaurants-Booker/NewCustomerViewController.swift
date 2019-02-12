@@ -55,13 +55,13 @@ class NewCustomerViewController: UIViewController, UITextFieldDelegate, UINaviga
     }
     
     func isMatched() -> Bool {
-        for customer in customers {
+     /*   for customer in customers {
             
-            if customer.password == password.text {
+           if customer.password == password.text {
                 
                 return true
             }
-        }
+        }*/
         return false
     }
     
@@ -96,9 +96,9 @@ class NewCustomerViewController: UIViewController, UITextFieldDelegate, UINaviga
             let password = self.password.text!
             let mobile = self.mobileNumber.text!
             
-            customer = Customer(username: username, password: password, mobile: mobile)
+         /*   customer = Customer(username: username, password: password, mobile: mobile)
             
-            customers.append(customer!)
+            customers.append(customer!)*/
             saveCustomers()
             if let owningNavigationController = navigationController{
                 owningNavigationController.popViewController(animated: true)
