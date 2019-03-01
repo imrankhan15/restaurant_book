@@ -24,6 +24,7 @@
 		19520E1321D7687400C30C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19520E1121D7687400C30C98 /* Main.storyboard */; };
 		19520E1621D7687400C30C98 /* Restaurants_Booker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19520E1421D7687400C30C98 /* Restaurants_Booker.xcdatamodeld */; };
 		19520E1B21D7687D00C30C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19520E1921D7687D00C30C98 /* LaunchScreen.storyboard */; };
+		196A46AA22281094005AE1F4 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 196A46A922281094005AE1F4 /* Media.xcassets */; };
 		19A4AF5321D93EF800D86CD5 /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A4AF5221D93EF800D86CD5 /* DishListTableViewCell.swift */; };
 		19A4AF5521D944DC00D86CD5 /* DishListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A4AF5421D944DC00D86CD5 /* DishListItemViewController.swift */; };
 		19B4095A220D6E0A003CBD0F /* RestaurantNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B40959220D6E0A003CBD0F /* RestaurantNameTableViewController.swift */; };
@@ -51,9 +52,9 @@
 		19520E0F21D7687400C30C98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		19520E1221D7687400C30C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19520E1521D7687400C30C98 /* Restaurants_Booker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restaurants_Booker.xcdatamodel; sourceTree = "<group>"; };
-		19520E1721D7687D00C30C98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19520E1A21D7687D00C30C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19520E1C21D7687D00C30C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		196A46A922281094005AE1F4 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		19A4AF5221D93EF800D86CD5 /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
 		19A4AF5421D944DC00D86CD5 /* DishListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListItemViewController.swift; sourceTree = "<group>"; };
 		19B40959220D6E0A003CBD0F /* RestaurantNameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantNameTableViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +113,6 @@
 				19029F5721D8C9DA00770E27 /* BookingViewController.swift */,
 				19029F5521D8BA3500770E27 /* CreateNewOwnerViewController.swift */,
 				193822F721D7F361001F4033 /* NewCustomerViewController.swift */,
-				19520E1721D7687D00C30C98 /* Assets.xcassets */,
 				19520E1921D7687D00C30C98 /* LaunchScreen.storyboard */,
 				19520E1C21D7687D00C30C98 /* Info.plist */,
 				19520E1421D7687400C30C98 /* Restaurants_Booker.xcdatamodeld */,
@@ -120,6 +120,7 @@
 				193822F521D7D130001F4033 /* Owner.swift */,
 				19029F5921D8D07500770E27 /* Dish.swift */,
 				19B4095B220D6FE4003CBD0F /* MyDataTableViewCell.swift */,
+				196A46A922281094005AE1F4 /* Media.xcassets */,
 			);
 			path = "Restaurants-Booker";
 			sourceTree = "<group>";
@@ -202,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19520E1B21D7687D00C30C98 /* LaunchScreen.storyboard in Resources */,
+				196A46AA22281094005AE1F4 /* Media.xcassets in Resources */,
 				19520E1321D7687400C30C98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,7 +419,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EF263B47B1C5A81363A13B69 /* Pods-Restaurants-Booker.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WY7K834X3;
 				INFOPLIST_FILE = "Restaurants-Booker/Info.plist";
@@ -437,7 +439,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 025E3114C579F79FEA287F68 /* Pods-Restaurants-Booker.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5WY7K834X3;
 				INFOPLIST_FILE = "Restaurants-Booker/Info.plist";
