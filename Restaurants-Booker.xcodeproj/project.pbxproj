@@ -97,32 +97,64 @@
 		19520E0C21D7687400C30C98 /* Restaurants-Booker */ = {
 			isa = PBXGroup;
 			children = (
+				197D58CF222BB33E004E0638 /* Model */,
+				197D58D0222BB352004E0638 /* View */,
+				197D58D1222BB35B004E0638 /* Controller */,
+				197D58D2222BB48A004E0638 /* Services */,
+				19520E1C21D7687D00C30C98 /* Info.plist */,
+				19520E1421D7687400C30C98 /* Restaurants_Booker.xcdatamodeld */,
+			);
+			path = "Restaurants-Booker";
+			sourceTree = "<group>";
+		};
+		197D58CF222BB33E004E0638 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				193822F321D7CCF8001F4033 /* Customer.swift */,
+				193822F521D7D130001F4033 /* Owner.swift */,
+				19029F5921D8D07500770E27 /* Dish.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		197D58D0222BB352004E0638 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				192FD3832211B78A00DEEBAD /* RestaurantBookingTableViewCell.swift */,
+				19A4AF5221D93EF800D86CD5 /* DishListTableViewCell.swift */,
+				19B4095B220D6FE4003CBD0F /* MyDataTableViewCell.swift */,
+				19520E1121D7687400C30C98 /* Main.storyboard */,
+				19520E1921D7687D00C30C98 /* LaunchScreen.storyboard */,
+				196A46A922281094005AE1F4 /* Media.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		197D58D1222BB35B004E0638 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				193822F921D815C5001F4033 /* Login-Customer-ViewController.swift */,
 				19029F5321D8B36200770E27 /* Login-OwnerViewController.swift */,
 				19520E0D21D7687400C30C98 /* AppDelegate.swift */,
 				19520E0F21D7687400C30C98 /* ViewController.swift */,
-				19520E1121D7687400C30C98 /* Main.storyboard */,
-				192FD3832211B78A00DEEBAD /* RestaurantBookingTableViewCell.swift */,
 				192FD3812211B72700DEEBAD /* RestaurantBookingsTableViewController.swift */,
 				192FD3852211C54B00DEEBAD /* RestaurantLoginViewController.swift */,
 				19B40959220D6E0A003CBD0F /* RestaurantNameTableViewController.swift */,
 				19B4095D220D7580003CBD0F /* CustomerCheckingViewController.swift */,
 				190388B021D92D3800CF1355 /* DishListTableViewController.swift */,
 				19A4AF5421D944DC00D86CD5 /* DishListItemViewController.swift */,
-				19A4AF5221D93EF800D86CD5 /* DishListTableViewCell.swift */,
 				19029F5721D8C9DA00770E27 /* BookingViewController.swift */,
 				19029F5521D8BA3500770E27 /* CreateNewOwnerViewController.swift */,
 				193822F721D7F361001F4033 /* NewCustomerViewController.swift */,
-				19520E1921D7687D00C30C98 /* LaunchScreen.storyboard */,
-				19520E1C21D7687D00C30C98 /* Info.plist */,
-				19520E1421D7687400C30C98 /* Restaurants_Booker.xcdatamodeld */,
-				193822F321D7CCF8001F4033 /* Customer.swift */,
-				193822F521D7D130001F4033 /* Owner.swift */,
-				19029F5921D8D07500770E27 /* Dish.swift */,
-				19B4095B220D6FE4003CBD0F /* MyDataTableViewCell.swift */,
-				196A46A922281094005AE1F4 /* Media.xcassets */,
 			);
-			path = "Restaurants-Booker";
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		197D58D2222BB48A004E0638 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		2CBDC78BE5B71734BFA7C744 /* Frameworks */ = {
